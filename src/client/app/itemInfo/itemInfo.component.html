@@ -1,5 +1,21 @@
-<div>
-    Item Info
-</div>
+<div>{{item.name}}  {{item.owner}} {{item.timeStarted}} {{item.state}}</div>
+<div style="width:40px;height:40px;background-color:black" (click)="showInfo=!showInfo"></div>
 
-<!--<metricsInfo></metricsInfo>-->
+
+<div [hidden]="!showInfo" >
+<div >
+<metricsInfo [metricsInfo]="item.metrics"></metricsInfo>
+</div >
+<div >
+<buildInfo [buildInfo]="item.build" ></buildInfo>
+</div>
+<div >
+<unitTestInfo [unitTestInfo]="item.unitTest"></unitTestInfo>
+</div>
+<div >
+<functionalTestInfo [functionalTestInfo]="item.functionalTest"></functionalTestInfo>
+</div>
+<div >
+Result:67
+</div>
+</div>

@@ -1,8 +1,0 @@
-<form [formGroup]="form">
-  <ul>
-    <li *ngFor="let answer of question.answers; let i = index; trackBy: trackByFn">
-      <input type="checkbox"  formControlName="answer[{{i}}]" /> {{answer.content}}
-      <!--(change)="answer.selected = !answer.selected"-->
-    </li>
-  </ul>
-</form>

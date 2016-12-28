@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   moduleId: module.id,
-  selector: 'firewall',
-  templateUrl: 'firewall.component.html',
-  styleUrls: ['firewall.component.css']
+  selector: 'unitTestInfo',
+  templateUrl: 'unitTestInfo.component.html',
+  styleUrls: ['unitTestInfo.component.css']
 })
 
-export class FirewallComponent {
-  
+export class UnitTestInfoComponent {
+  @Input() unitTestInfo: any;
  }
