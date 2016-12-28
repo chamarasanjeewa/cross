@@ -2,22 +2,22 @@ import { Component, OnInit, NgModule,Input  } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
-import { SharedService } from '../shared/sharedService';
-import { HttpService } from '../services/httpService';
+
+import { TestInfoService } from '../services/testInfoService';
 import {TestInfoModel} from '../models/testInfoModel'
 
 
 @Component({
     moduleId: module.id,
-    selector: 'mcq-result',
+    // selector: 's',
     templateUrl: 'dashBoard.component.html',
     styleUrls: ['dashBoard.component.css'],
-    providers: [HttpService]
+    providers: [TestInfoService]
 })
 export class DashBoardComponent implements OnInit {
    
       private testInfolist: TestInfoModel[] = [];
-    constructor(public fb: FormBuilder, private route: ActivatedRoute,private router:Router,private sharedService:SharedService) {
+    constructor(public fb: FormBuilder, private route: ActivatedRoute,private router:Router) {
      
         var testInfoLine1: TestInfoModel = new TestInfoModel();
         testInfoLine1.name="Tenrox-R1_1235";

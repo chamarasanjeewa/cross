@@ -1,12 +1,35 @@
-:host {
-  display: block;
-  padding: 0 16px;
+
+#container {
+    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+    width:100%;
+    padding-top: 55px;
+}
+#container>div {
+    width: 100px;
+    height: 100px;
+    vertical-align: top;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+   
+}
+span {
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0
+}
+.toggle-button{
+  width:40px;height:40px;background-color:green;float:left
 }
 
-h2 {
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 0.005em;
-  margin-bottom: 0;
-  margin-top: 0.83em;
+.main-container{
+   width: 100%;
+    border: 2px solid green;
+    padding: 25px;
+    margin: 25px;
+
+
 }

@@ -6,7 +6,6 @@ import { SharedModule } from '../shared/shared.module';
 import { CanActivateViaAuthGuard } from '../shared/canActivateAuthGuard';
 import { HomeComponent, HomeRoutes } from './index';
 
-
 @NgModule({
   imports: [CommonModule, SharedModule, RouterModule],
   declarations: [HomeComponent],

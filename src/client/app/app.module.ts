@@ -4,13 +4,9 @@ import { APP_BASE_HREF } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-
 import { HomeRoutes } from './home/index';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { SharedModule } from './shared/shared.module';
-
-
 import { HomeModule } from './home/home.module';
 
 
@@ -20,12 +16,8 @@ import { HomeModule } from './home/home.module';
     ReactiveFormsModule,
     FormsModule,
     RouterModule.forRoot(HomeRoutes),
-
     HomeModule,
- 
-    // ExamStartModule,
     SharedModule.forRoot()
-    //ExamModule,
   ],
   declarations: [AppComponent],
   providers: [{

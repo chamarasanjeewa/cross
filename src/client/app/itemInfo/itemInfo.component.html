@@ -1,8 +1,9 @@
+<div class="main-container">
 <div>{{item.name}}  {{item.owner}} {{item.timeStarted}} {{item.state}}</div>
-<div style="width:40px;height:40px;background-color:black" (click)="showInfo=!showInfo"></div>
+<div class="toggle-button" (click)="showInfo=!showInfo"></div>
 
 
-<div [hidden]="!showInfo" >
+<div [hidden]="!showInfo" id="container" >
 <div >
 <metricsInfo [metricsInfo]="item.metrics"></metricsInfo>
 </div >
@@ -17,5 +18,6 @@
 </div>
 <div >
 Result:67
+</div>
 </div>
 </div>
