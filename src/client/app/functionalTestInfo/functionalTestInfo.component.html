@@ -1,5 +1,7 @@
-<div class="panel panel-default">
+<div class="panel panel-default panel-background">
+    
     <div class="panel-body" >
+     <div class="item-heading">Functional Test</div>
      <div class="chart"
                     chart  
                     [data]="data" 
@@ -8,8 +10,10 @@
                     [columnTypes]="columnTypes" 
                     [chartType]="chartType">
              </div>
-       
+         {{functionalTestInfo.passPercentage}}% tests passed
+
+             {{functionalTestInfo.coveredPercentage}}% code covered
+  <!--passed: {{functionalTestInfo.passed}} failed:{{functionalTestInfo.failed}}-->
     </div>
   
-     <span>passed:</span> {{functionalTestInfo.passed}}<span>failed:</span> {{functionalTestInfo.failed}}
 </div>

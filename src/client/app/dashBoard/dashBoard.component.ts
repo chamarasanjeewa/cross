@@ -18,7 +18,7 @@ export class DashBoardComponent implements OnInit {
    
       private testInfolist: TestInfoModel[] = [];
     constructor(public fb: FormBuilder, private route: ActivatedRoute,private router:Router) {
-     
+     this.prepareMockData();
     }
 
     prepareMockData(){
@@ -26,13 +26,13 @@ export class DashBoardComponent implements OnInit {
         var testInfoLine1: TestInfoModel = new TestInfoModel();
         testInfoLine1.name="Tenrox-R1_1235";
         testInfoLine1.owner="jtuck";
-        testInfoLine1.type="firewall";
+        testInfoLine1.type="build";
         testInfoLine1.timeStarted="4/18/2014 12.45pm";
         testInfoLine1.state="complete";
         testInfoLine1.metrics={'test':23,'maintainability':23,'security':45, 'workmanship':56};
         testInfoLine1.build={'debug':true,'release':true,'time':'10:46 am','date':'4/17/2014'};
-        testInfoLine1.unitTest={'passed':23, 'failed':45};
-        testInfoLine1.functionalTest={'passed':26, 'failed':76};
+        testInfoLine1.unitTest={'passed':23, 'failed':45,'passPercentage':67,'coveredPercentage':34};
+        testInfoLine1.functionalTest={'passed':26, 'failed':76,'passPercentage':67,'coveredPercentage':34};
         this.testInfolist.push(testInfoLine1);
 
         var testInfoLine2: TestInfoModel = new TestInfoModel();
@@ -43,8 +43,8 @@ export class DashBoardComponent implements OnInit {
         testInfoLine2.state="complete";
         testInfoLine2.metrics={'test':56,'maintainability':78,'security':35, 'workmanship':56};
         testInfoLine2.build={'debug':true,'release':true,'time':'10:46 am','date':'4/17/2014'};
-        testInfoLine2.unitTest={'passed':67, 'failed':67};
-        testInfoLine2.functionalTest={'passed':23, 'failed':45};
+        testInfoLine2.unitTest={'passed':67, 'failed':67,'passPercentage':67,'coveredPercentage':34};
+        testInfoLine2.functionalTest={'passed':23, 'failed':45,'passPercentage':67,'coveredPercentage':34};
 
         this.testInfolist.push(testInfoLine2);
 
@@ -56,8 +56,8 @@ export class DashBoardComponent implements OnInit {
         testInfoLine3.state="complete";
         testInfoLine3.metrics={'test':56,'maintainability':78,'security':35, 'workmanship':56};
         testInfoLine3.build={'debug':true,'release':true,'time':'10:46 am','date':'4/17/2014'};
-        testInfoLine3.unitTest={'passed':67, 'failed':67};
-        testInfoLine3.functionalTest={'passed':23, 'failed':45};
+        testInfoLine3.unitTest={'passed':67, 'failed':67,'passPercentage':67,'coveredPercentage':34};
+        testInfoLine3.functionalTest={'passed':23, 'failed':45,'passPercentage':67,'coveredPercentage':34};
 
      this.testInfolist.push(testInfoLine3);
 
@@ -70,8 +70,8 @@ export class DashBoardComponent implements OnInit {
         testInfoLine4.state="complete";
         testInfoLine4.metrics={'test':56,'maintainability':78,'security':35, 'workmanship':56};
         testInfoLine4.build={'debug':true,'release':true,'time':'10:46 am','date':'4/17/2014'};
-        testInfoLine4.unitTest={'passed':67, 'failed':67};
-        testInfoLine4.functionalTest={'passed':23, 'failed':45};
+        testInfoLine4.unitTest={'passed':67, 'failed':67,'passPercentage':67,'coveredPercentage':34};
+        testInfoLine4.functionalTest={'passed':23, 'failed':45,'passPercentage':67,'coveredPercentage':34};
 
      this.testInfolist.push(testInfoLine4);
     }

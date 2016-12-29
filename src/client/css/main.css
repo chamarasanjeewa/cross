@@ -29,14 +29,14 @@ p {
 }
 
 ul {
-  margin: 10px 0 0;
-  padding: 0 0 0 20px;
+  margin: 0;
+  /*padding: 0 0 0 20px;*/
 }
 
-li {
+/*li {
   font-weight: 400;
   margin-top: 4px;
-}
+}*/
 
 input {
   border: 1px solid #106cc8;
@@ -61,3 +61,43 @@ button {
 button:hover {
   background-color: #28739e;
 }
+
+  .hedding {
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+
+        .table-list li {
+            width: calc((100% / 8) - 30px);
+            vertical-align: top;
+        }
+.table-inside-list{
+  
+}
+.table-inside-list>li{
+  width: calc((100% / 5) - 30px);
+   vertical-align: top;
+   
+}
+.table-inside-list>li .panel-body{
+min-height: 360px;
+}
+.progress{
+  margin-bottom: 0;
+}
+
+.item-heading{
+    font-size: 16px; 
+    color: green;
+}
+
+.panel-background{
+border-color: green;
+border-width: 4px;
+}
+
+.panel-background-empty{
+border-color: snow;
+border-width: 4px;
+}
+

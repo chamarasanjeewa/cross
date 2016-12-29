@@ -1,6 +1,7 @@
 
-<div class="panel panel-default">
+<div class="panel panel-default panel-background">
     <div class="panel-body">
+        <div class="item-heading">Unit Test</div>
         <div class="chart"
                     chart  
                     [data]="data" 
@@ -9,8 +10,11 @@
                     [columnTypes]="columnTypes" 
                     [chartType]="chartType">
              </div>
-        passed: {{unitTestInfo.passed}} failed: {{unitTestInfo.failed}}
-      
+
+             {{unitTestInfo.passPercentage}}% tests passed
+
+             {{unitTestInfo.coveredPercentage}}% code covered
+        <!--passed: {{unitTestInfo.passed}} failed: {{unitTestInfo.failed}}-->
     </div>
 </div>
 
