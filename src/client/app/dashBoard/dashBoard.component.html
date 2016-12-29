@@ -1,11 +1,42 @@
-   <span>Tenrox-R1_1234</span>
-    <span></span>
-    <span>4/18/2014</span>
-    <span>Pending</span>
-<ul >
+<!--<span>Tenrox-R1_1234</span>
+<span></span>
+<span>4/18/2014</span>
+<span>Pending</span>-->
+<!--<ul>
     <li *ngFor="let item of testInfolist">
-        <div *ngIf="item.type=='firewall'"><firewall [firewallItem]="item"></firewall></div>
-        <div  *ngIf="item.type=='build'"><build [buildItem]="item"></build></div>
-        </li>
+        <div *ngIf="item.type=='firewall'">
+            <firewall [firewallItem]="item"></firewall>
+        </div>
+        <div *ngIf="item.type=='build'">
+            <build [buildItem]="item"></build>
+        </div>
+    </li>
 
-     </ul>
+</ul>-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="hedding">
+                <ul class="list-inline table-list">
+                    <li>Change list / Build</li>
+                    <li>Owner</li>
+                    <li>Time</li>
+                    <li>State</li>
+                    <li>Metrics</li>
+                    <li>Build</li>
+                    <li>Unit Test</li>
+                    <li>F Test</li>
+                </ul>
+            </div>
+
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div *ngFor="let item of testInfolist">
+                    <firewall [firewallItem]="item" *ngIf="item.type=='firewall'"></firewall>
+                    <build [buildItem]="item" *ngIf="item.type=='build'"></build>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>

@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './index';
-import { CanActivateViaAuthGuard } from '../shared/canActivateAuthGuard';
+
 
 export const HomeRoutes: Routes = [
   {

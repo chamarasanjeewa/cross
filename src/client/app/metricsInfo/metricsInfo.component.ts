@@ -4,11 +4,14 @@ import { Component,Input } from '@angular/core';
   moduleId: module.id,
   selector: 'metricsInfo',
   templateUrl: 'metricsInfo.component.html',
-  styleUrls: ['metricsInfo.component.css']
+  styleUrls: ['metricsInfo.component.css']//,
+ // directives: [GoogleChart]
 })
 
 export class MetricsInfoComponent {
   @Input() metricsInfo: any;
+
+
   constructor(){
 
   var a=this.metricsInfo;
