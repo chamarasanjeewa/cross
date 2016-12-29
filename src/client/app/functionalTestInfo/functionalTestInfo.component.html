@@ -1,6 +1,15 @@
-
- <div class="panel panel-default">
-                        <div class="panel-body">
-                           <span>passed:</span> {{functionalTestInfo.passed}}<span>failed:</span> {{functionalTestInfo.failed}}
-                        </div>
-                    </div>
+<div class="panel panel-default">
+    <div class="panel-body" >
+     <div class="chart"
+                    chart  
+                    [data]="data" 
+                    [options]="options" 
+                    [labels]="labels" 
+                    [columnTypes]="columnTypes" 
+                    [chartType]="chartType">
+             </div>
+       
+    </div>
+  
+     <span>passed:</span> {{functionalTestInfo.passed}}<span>failed:</span> {{functionalTestInfo.failed}}
+</div>

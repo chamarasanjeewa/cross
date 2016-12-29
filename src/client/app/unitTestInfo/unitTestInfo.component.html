@@ -1,9 +1,17 @@
 
 <div class="panel panel-default">
     <div class="panel-body">
-        <!--passed: {{unitTestInfo.passed}} failed: {{unitTestInfo.failed}}
-        <div><span>Debug</span> </div>
-        <div><span>Release</span></div>
-        <div><span>{{buildInfo.time}}</span> <span>{{buildInfo.date}}</span></div>-->
+        <div class="chart"
+                    chart  
+                    [data]="data" 
+                    [options]="options" 
+                    [labels]="labels" 
+                    [columnTypes]="columnTypes" 
+                    [chartType]="chartType">
+             </div>
+        passed: {{unitTestInfo.passed}} failed: {{unitTestInfo.failed}}
+      
     </div>
 </div>
+
+ 

@@ -19,6 +19,10 @@ export class DashBoardComponent implements OnInit {
       private testInfolist: TestInfoModel[] = [];
     constructor(public fb: FormBuilder, private route: ActivatedRoute,private router:Router) {
      
+    }
+
+    prepareMockData(){
+
         var testInfoLine1: TestInfoModel = new TestInfoModel();
         testInfoLine1.name="Tenrox-R1_1235";
         testInfoLine1.owner="jtuck";
@@ -42,7 +46,34 @@ export class DashBoardComponent implements OnInit {
         testInfoLine2.unitTest={'passed':67, 'failed':67};
         testInfoLine2.functionalTest={'passed':23, 'failed':45};
 
-     this.testInfolist.push(testInfoLine2);
+        this.testInfolist.push(testInfoLine2);
+
+        var testInfoLine3: TestInfoModel = new TestInfoModel();
+        testInfoLine3.name="432462";
+        testInfoLine3.owner="samy";
+        testInfoLine3.type="firewall";
+        testInfoLine3.timeStarted="4/18/2014 12:12pm";
+        testInfoLine3.state="complete";
+        testInfoLine3.metrics={'test':56,'maintainability':78,'security':35, 'workmanship':56};
+        testInfoLine3.build={'debug':true,'release':true,'time':'10:46 am','date':'4/17/2014'};
+        testInfoLine3.unitTest={'passed':67, 'failed':67};
+        testInfoLine3.functionalTest={'passed':23, 'failed':45};
+
+     this.testInfolist.push(testInfoLine3);
+
+     
+        var testInfoLine4: TestInfoModel = new TestInfoModel();
+        testInfoLine4.name="432462";
+        testInfoLine4.owner="samy";
+        testInfoLine4.type="firewall";
+        testInfoLine4.timeStarted="4/18/2014 12:12pm";
+        testInfoLine4.state="complete";
+        testInfoLine4.metrics={'test':56,'maintainability':78,'security':35, 'workmanship':56};
+        testInfoLine4.build={'debug':true,'release':true,'time':'10:46 am','date':'4/17/2014'};
+        testInfoLine4.unitTest={'passed':67, 'failed':67};
+        testInfoLine4.functionalTest={'passed':23, 'failed':45};
+
+     this.testInfolist.push(testInfoLine4);
     }
 
     

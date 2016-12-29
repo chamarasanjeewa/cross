@@ -1,9 +1,10 @@
 <div class="panel panel-info">
     <div class="panel-heading" role="tab" id="headingOne">
         <h4 class="panel-title">
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" (click)="toggle()" aria-expanded="areaExpanded" aria-controls="collapseOne">
                 <ul class="list-inline table-list">
                     <li><i class="fa fa-television "></i> </li>
+                      <li>{{item.name}}</li>
                     <li>{{item.owner}}</li>
                     <li> {{item.timeStarted}}</li>
                     <li> {{item.state}}</li>
@@ -39,20 +40,24 @@
             </a>
         </h4>
     </div>
-    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+    <div id="collapseOne" class="panel-collapse collapse "  [ngClass]="{ 'in':areaExpanded }" role="tabpanel" aria-labelledby="headingOne">
         <div class="panel-body">
             <ul class="list-inline table-list">
                 <li>
+
                     <metricsInfo [metricsInfo]="item.metrics"></metricsInfo>
                 </li>
                 <li>
+                    
                     <buildInfo [buildInfo]="item.build"></buildInfo>
                 </li>
 
                 <li>
+                 
                     <unitTestInfo [unitTestInfo]="item.unitTest"></unitTestInfo>
                 </li>
                 <li>
+                 
                     <functionalTestInfo [functionalTestInfo]="item.functionalTest"></functionalTestInfo>
                 </li>
                 <li>

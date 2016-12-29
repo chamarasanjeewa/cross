@@ -9,9 +9,9 @@ import {MetricsInfoComponent} from '../metricsInfo/metricsInfo.component';
 import {BuildInfoComponent} from '../buildInfo/buildInfo.component';
 import {UnitTestInfoComponent} from '../unitTestInfo/unitTestInfo.component';
 import {FunctionalTestInfoComponent} from '../functionalTestInfo/functionalTestInfo.component';
-
+import {Ng2GoogleChartModule} from 'ng2-googlechart';
 @NgModule({
-    imports: [CommonModule, RouterModule.forChild(DashBoardRoutes)],
+    imports: [CommonModule, RouterModule.forChild(DashBoardRoutes),Ng2GoogleChartModule],
     declarations: [DashBoardComponent,FirewallComponent,ItemInfoComponent,BuildComponent,UnitTestInfoComponent,MetricsInfoComponent,FunctionalTestInfoComponent,BuildInfoComponent],
     exports: [DashBoardComponent]
 })

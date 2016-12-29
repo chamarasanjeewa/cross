@@ -9,10 +9,16 @@ import { Component,Input } from '@angular/core';
 
 export class ItemInfoComponent {
      @Input() item: any;
-
+     areaExpanded:boolean=false;
      constructor(){
        
      }
+
+toggle(){
+  this.areaExpanded=!this.areaExpanded;
+  
+}
+     
 
      
  }
