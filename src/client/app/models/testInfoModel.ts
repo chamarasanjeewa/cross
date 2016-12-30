@@ -11,3 +11,14 @@ export class  TestInfoModel{
      type:string;
      functionalTest:any;
 }
+
+export class ListDisplayInfo{
+    metricsColor:string;
+    unitTestColor:string;
+    functionalTestColor:string;
+    buildColor:string;
+    panelColorClass:string;
+    stateString:string;
+
+}
+

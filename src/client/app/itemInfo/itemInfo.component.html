@@ -1,4 +1,4 @@
-<div class="panel panel-info"  [ngClass]="{ 'panel-info':item.state=='complete' }">
+<div class="panel " [ngClass]="listDisplayInfo.panelColorClass">
     <div class="panel-heading" role="tab" id="headingOne">
         <h4 class="panel-title">
             <a role="button" data-toggle="collapse" data-parent="#accordion" (click)="toggle()" aria-expanded="areaExpanded" aria-controls="collapseOne">
@@ -6,31 +6,31 @@
                     <li><i class="fa fa-television "></i>{{item.name}} </li>
                     <li>{{item.owner}}</li>
                     <li> {{item.timeStarted}}</li>
-                    <li> {{item.state}}</li>
+                    <li> {{this.listDisplayInfo.stateString}}</li>
                     <li>
                         <div class="progress">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                            <div class="progress-bar" [style.background-color]="  this.listDisplayInfo.metricsColor"  role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
                                
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="progress">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                            <div class="progress-bar" [style.background-color]="  this.listDisplayInfo.buildColor" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
                                 
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="progress">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                            <div class="progress-bar" [style.background-color]="  this.listDisplayInfo.unitTestColor" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
                              
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="progress">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                            <div class="progress-bar" [style.background-color]="  this.listDisplayInfo.functionalTestColor" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
                                
                             </div>
                         </div>

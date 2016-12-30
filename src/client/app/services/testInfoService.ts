@@ -5,8 +5,14 @@ import {Observable} from 'rxjs/Rx';
 @Injectable()
 export class TestInfoService{
     
-    constructor(){
+    constructor(private http:Http){
         
+    }
+
+    getTestRecordsFromJson(): Observable<any>{
+              return this.http.get("./app/testRecords.json")
+                         .map((res:any) => res.json());
+                        
     }
     
 }

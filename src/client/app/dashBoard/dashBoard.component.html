@@ -14,7 +14,7 @@
                     <li>F Test</li>
                 </ul>
             </div>
-            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" *ngFor="let item of testInfolist">
+            <div class="panel-group" id="accordion"  role="tablist" aria-multiselectable="true" *ngFor="let item of testInfolist">
                
                     <firewall [firewallItem]="item" *ngIf="item.type=='firewall'"></firewall>
                     <build [buildItem]="item" *ngIf="item.type=='build'"></build>
