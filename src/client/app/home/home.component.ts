@@ -17,3 +17,11 @@ export class HomeComponent implements OnInit {
 
   
 }
+
+@Component({
+    selector: 'dynamic-form',
+    template: ''
+})
+export class DynamicFormComponent {
+
+}

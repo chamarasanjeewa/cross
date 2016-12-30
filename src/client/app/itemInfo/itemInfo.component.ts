@@ -1,5 +1,5 @@
-import { Component, Input,OnInit } from '@angular/core';
-//import { STATE } from '../utils/enums';
+import { Component, Input, OnInit } from '@angular/core';
+import { STATE } from '../utils/enums';
 import { ListDisplayInfo } from '../models/testInfoModel';
 @Component({
   moduleId: module.id,
@@ -25,85 +25,70 @@ export class ItemInfoComponent implements OnInit {
 
   ngOnInit() {
 
-       this.getListDisplayInfo(this.item.state);
-    }
+    this.getListDisplayInfo(this.item.state);
+  }
 
   getListDisplayInfo(stateInfo: STATE) {
     switch (stateInfo) {
       case STATE.Pending:
-        this.listDisplayInfo.metricsColor = "#C0C0C0";
-        this.listDisplayInfo.unitTestColor = "#C0C0C0";
-        this.listDisplayInfo.buildColor = "#C0C0C0";
-        this.listDisplayInfo.functionalTestColor = "#C0C0C0";
-        this.listDisplayInfo.panelColorClass = "panel-default";
-       this.listDisplayInfo. stateString="Pending";
+        this.mapPendingInfo();
         break;
       case STATE.Running:
-        this.listDisplayInfo.metricsColor = "LightSkyBlue";
-        this.listDisplayInfo.unitTestColor = "#C0C0C0";
-        this.listDisplayInfo.buildColor = "#C0C0C0";
-        this.listDisplayInfo.functionalTestColor = "#C0C0C0";
-        this.listDisplayInfo.panelColorClass = "panel-info"
-        this.listDisplayInfo. stateString="Running";
+        this.mapRunningInfo();
         break;
       case STATE.Complete:
-        this.listDisplayInfo.metricsColor = "green";
-        this.listDisplayInfo.unitTestColor = "green";
-        this.listDisplayInfo.buildColor = "green";
-        this.listDisplayInfo.functionalTestColor = "green";
-        this.listDisplayInfo.panelColorClass = "panel-success"
-        this.listDisplayInfo. stateString="Complete";
+        this.mapCompleteInfo();
         break;
       case STATE.Accepted:
-        this.listDisplayInfo.metricsColor = "green";
-        this.listDisplayInfo.unitTestColor = "green";
-        this.listDisplayInfo.buildColor = "green";
-        this.listDisplayInfo.functionalTestColor = "green";
-        this.listDisplayInfo.panelColorClass = "panel-success"
-        this.listDisplayInfo. stateString="Accepted";
+        this.mapAcceptedInfo();
         break;
       case STATE.Rejected:
-        this.listDisplayInfo.metricsColor = "red";
-        this.listDisplayInfo.unitTestColor = "#C0C0C0";
-        this.listDisplayInfo.buildColor = "#C0C0C0";
-        this.listDisplayInfo.functionalTestColor = "#C0C0C0";
-        this.listDisplayInfo.panelColorClass = "panel-danger"
-        this.listDisplayInfo. stateString="Rejected";
+        this.mapRejectedInfo();
         break;
 
     }
-    // {'panel-success': item.state==STATE.Complete,'panel-info': item.state==STATE.Accepted,'panel-danger': item.state==STATE.Rejected, 'panel-default': item.state==STATE.Running}
-    // if (this.item.state == STATE.Running) {
-    //   return "grey"
-    // } else if (this.item.state == STATE.Pending) {
-    //   return "blue"
-    // } else if (this.item.state == STATE.Complete || this.item.state == STATE.Accepted) {
-    //   return "green"
-    // } else if (this.item.state == STATE.Rejected) {
-    //   return "green"
-    // }
-    // return "";
   }
 
-  getBuildsBackGroundColor() {
-
+  mapRunningInfo() {
+    this.listDisplayInfo.metricsColor = "LightSkyBlue";
+    this.listDisplayInfo.unitTestColor = "#C0C0C0";
+    this.listDisplayInfo.buildColor = "#C0C0C0";
+    this.listDisplayInfo.functionalTestColor = "#C0C0C0";
+    this.listDisplayInfo.panelColorClass = "panel-info"
+    this.listDisplayInfo.stateString = "Running";
   }
 
-  getUnitTestBackGroundColor() {
+  mapPendingInfo() {
+    this.listDisplayInfo.metricsColor = "#C0C0C0";
+    this.listDisplayInfo.unitTestColor = "#C0C0C0";
+    this.listDisplayInfo.buildColor = "#C0C0C0";
+    this.listDisplayInfo.functionalTestColor = "#C0C0C0";
+    this.listDisplayInfo.panelColorClass = "panel-default";
+    this.listDisplayInfo.stateString = "Pending";
+  }
+  mapAcceptedInfo() {
+    this.listDisplayInfo.metricsColor = "green";
+    this.listDisplayInfo.unitTestColor = "green";
+    this.listDisplayInfo.buildColor = "green";
+    this.listDisplayInfo.functionalTestColor = "green";
+    this.listDisplayInfo.panelColorClass = "panel-success"
+    this.listDisplayInfo.stateString = "Accepted";
 
   }
-
-  getFunctionaTestBackGroundColor() {
-
+  mapRejectedInfo() {
+    this.listDisplayInfo.metricsColor = "red";
+    this.listDisplayInfo.unitTestColor = "#C0C0C0";
+    this.listDisplayInfo.buildColor = "#C0C0C0";
+    this.listDisplayInfo.functionalTestColor = "#C0C0C0";
+    this.listDisplayInfo.panelColorClass = "panel-danger"
+    this.listDisplayInfo.stateString = "Rejected";
   }
-
-
-}
-
-export enum STATE {
-  Accepted = 1,
-  Rejected = 2,
-  Pending = 3,
-  Complete = 4,
-  Running = 5
+  mapCompleteInfo() {
+    this.listDisplayInfo.metricsColor = "green";
+    this.listDisplayInfo.unitTestColor = "green";
+    this.listDisplayInfo.buildColor = "green";
+    this.listDisplayInfo.functionalTestColor = "green";
+    this.listDisplayInfo.panelColorClass = "panel-success"
+    this.listDisplayInfo.stateString = "Complete";
+  }
 }

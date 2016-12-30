@@ -14,6 +14,7 @@ export class UnitTestInfoComponent implements OnInit{
   chartType:any;
   options:any;
   data:any;
+  chartColors:any;
 
  ngOnInit() {
 
@@ -34,15 +35,16 @@ export class UnitTestInfoComponent implements OnInit{
              this. options = {
                 'width': 300,
                 'height': 300,
-                'bars': 'vertical',
-                'chartArea': { 'left': 0, 'bottom': 0, 'right': 0, 'top': 0 },
+                //'bars': 'vertical',
+               // 'chartArea': { 'left': 0, 'bottom': 0, 'right': 0, 'top': 0 },
                 hAxis: {
-                  title: 'Subject'
+                  title: ''
                 },
                 vAxis: {
-                  title: 'Marks'
+                  title: ''
                 }
               }
+          
        
     }
     
