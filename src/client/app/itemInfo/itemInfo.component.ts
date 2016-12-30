@@ -39,11 +39,11 @@ export class ItemInfoComponent implements OnInit {
        this.listDisplayInfo. stateString="Pending";
         break;
       case STATE.Running:
-        this.listDisplayInfo.metricsColor = "blue";
+        this.listDisplayInfo.metricsColor = "LightSkyBlue";
         this.listDisplayInfo.unitTestColor = "#C0C0C0";
         this.listDisplayInfo.buildColor = "#C0C0C0";
         this.listDisplayInfo.functionalTestColor = "#C0C0C0";
-        this.listDisplayInfo.panelColorClass = "panel-success"
+        this.listDisplayInfo.panelColorClass = "panel-info"
         this.listDisplayInfo. stateString="Running";
         break;
       case STATE.Complete:
@@ -59,7 +59,7 @@ export class ItemInfoComponent implements OnInit {
         this.listDisplayInfo.unitTestColor = "green";
         this.listDisplayInfo.buildColor = "green";
         this.listDisplayInfo.functionalTestColor = "green";
-        this.listDisplayInfo.panelColorClass = "panel-info"
+        this.listDisplayInfo.panelColorClass = "panel-success"
         this.listDisplayInfo. stateString="Accepted";
         break;
       case STATE.Rejected:
