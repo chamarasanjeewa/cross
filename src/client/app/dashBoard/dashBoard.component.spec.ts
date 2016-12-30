@@ -4,85 +4,54 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import {TestService} from '../services/user.service';
 import {HomeComponent} from '../home/home.component';
-// //import {Ng2GoogleChartModule} from 'ng2-googlechart';
+import { Routes } from '@angular/router';
+import {DashBoardComponent} from './dashBoard.component';
+import { TestInfoService } from '../services/testInfoService';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { DashBoardRoutes } from './index';
+import {FirewallComponent} from '../fireWall/firewall.component'
+import {ItemInfoComponent} from '../itemInfo/itemInfo.component'
+import {BuildComponent} from '../build/index'
+import {MetricsInfoComponent} from '../metricsInfo/metricsInfo.component';
+import {BuildInfoComponent} from '../buildInfo/buildInfo.component';
+import {UnitTestInfoComponent} from '../unitTestInfo/unitTestInfo.component';
+import {FunctionalTestInfoComponent} from '../functionalTestInfo/functionalTestInfo.component';
+//import {Ng2GoogleChartModule} from 'ng2-googlechart';
+let helloService:any;
 
-// // import {
-// //   BaseRequestOptions,
-// //   ConnectionBackend,
-// //   Http, HttpModule
-// // } from '@angular/http';
-// // import { MockBackend } from '@angular/http/testing';
-
-//  import { DynamicFormComponent } from '../home/home.component';
-
-// export function main() {
-//    describe('HomeComponent', () => {
-//      let component: DynamicFormComponent;
-  
-//      beforeEach(() => {
-//        TestBed.configureTestingModule({
-// //         imports: [FormsModule, RouterModule, HttpModule],
-//          declarations: [DynamicFormComponent]//,
-// //         providers: [
-// //         //   NameListService,
-// //         //   BaseRequestOptions,
-// //         //   MockBackend,
-// //         //   {provide: Http, useFactory: function (backend: ConnectionBackend, defaultOptions: BaseRequestOptions) {
-// //         //       return new Http(backend, defaultOptions);
-// //         //     },
-// //         //     deps: [MockBackend, BaseRequestOptions]
-// //         //   },
-// //         ]
-//        });
-//      });
-
-//   const fixture = TestBed.createComponent(DynamicFormComponent);
-//        //  component = fixture.componentInstance;
-
-//  it('should have a defined component', () => {
-//    expect(5).toBe(5);
-//        //expect(component).toBeDefined();
-//     });
-//  });
-// }
 beforeEach(() => {
   TestBed.configureTestingModule({
-    declarations: [
-      HomeComponent
-    ],
+      declarations: [DashBoardComponent,FirewallComponent,ItemInfoComponent,BuildComponent,UnitTestInfoComponent,MetricsInfoComponent,FunctionalTestInfoComponent,BuildInfoComponent],
     imports: [
       // HttpModule, etc.
     ],
     providers: [
-      // { provide: ServiceA, useClass: TestServiceA }
+      
+      {provide: TestInfoService, useValue: helloService}
     ]
   });
 });
 
-it('should do something', async(() => {
-  // Overrides here, if you need them
-  TestBed.overrideComponent(HomeComponent, {
-    set: {
-      template: '<div>Overridden template here</div>'
-      // ...
-    }
-  });
+it("can initialize", async(() => {
+    TestBed.compileComponents().then(() => {
+        const fixture = TestBed.createComponent(DashBoardComponent);
+        let element = fixture.nativeElement;
+        let component = fixture.componentInstance;
 
+        fixture.detectChanges();
 
-TestBed.compileComponents().then(() => {
-    const fixture = TestBed.createComponent(HomeComponent);
+        expect(element).not.toBeNull();
+        expect(component).not.toBeNull();
 
-    // Access the dependency injected component instance
-    const app = fixture.componentInstance;
+        //expect(helloService.greet).toHaveBeenCalled();
 
-    expect(4).toBe(4);
+        let header = element.querySelector("h1");
+        expect(header).not.toBeNull();
+        expect(header.textContent).toBe("Greeting test");
 
-    // Access the element
-    const element = fixture.nativeElement;
-
-    // Detect changes as necessary
-    fixture.detectChanges();
-
-    expect(element.textContent).toContain('something');
-  });
-  }));
+        let greeting = element.querySelector("#greeting");
+        expect(greeting).not.toBeNull();
+        expect(greeting.textContent).toBe("greet");
+    });
+}));

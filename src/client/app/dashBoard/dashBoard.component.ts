@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 
 import { TestInfoService } from '../services/testInfoService';
 import {TestInfoModel} from '../models/testInfoModel'
-
+//import {Ng2GoogleChartModule} from 'ng2-googlechart';
 
 @Component({
     moduleId: module.id,
