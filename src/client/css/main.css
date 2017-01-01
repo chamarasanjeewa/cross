@@ -101,3 +101,7 @@ border-color: snow;
 border-width: 4px;
 }
 
+.panel-heading{
+    
+     font-weight: bold;
+}

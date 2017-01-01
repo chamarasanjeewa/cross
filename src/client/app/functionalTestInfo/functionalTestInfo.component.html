@@ -1,19 +1,20 @@
 <div class="panel panel-default panel-background">
-    
-    <div class="panel-body" >
-     <div class="item-heading">Functional Test</div>
-     <!--<div class="chart"
-                    chart  
-                    [data]="data" 
-                    [options]="options" 
-                    [labels]="labels" 
-                    [columnTypes]="columnTypes" 
-                    [chartType]="chartType">
-             </div>-->
-         {{functionalTestInfo.passPercentage}}% tests passed
 
-             {{functionalTestInfo.coveredPercentage}}% code covered
-  <!--passed: {{functionalTestInfo.passed}} failed:{{functionalTestInfo.failed}}-->
+    <div class="panel-body">
+        <div class="item-heading">Functional Test</div>
+        <div style="display: block">
+            <canvas baseChart [data]="pieChartData" [colors]="chartColors" [chartType]="pieChartType"></canvas>
+        </div>
+        <div class="result-percentage">
+            <div ><h1>{{functionalTestInfo.passPercentage}}% </h1></div>
+            tests passed
+            <div>
+            </div>
+            <div> {{functionalTestInfo.coveredPercentage}}% </div>
+            <div> code covered</div>
+
+        </div>
+        <!--passed: {{functionalTestInfo.passed}} failed:{{functionalTestInfo.failed}}-->
     </div>
-  
+
 </div>

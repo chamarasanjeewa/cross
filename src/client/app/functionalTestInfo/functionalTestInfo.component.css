@@ -1,0 +1,7 @@
+.result-percentage{
+    margin-left:5px;
+}
+.result-percentage>h1{
+    font-size: 16px; 
+    color: green;
+}

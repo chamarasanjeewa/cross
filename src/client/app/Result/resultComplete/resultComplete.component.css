@@ -1,1 +1,27 @@
 
+.result-heading{
+    font-size: 16px; 
+    color: black;
+     font-weight: bold;
+}
+
+.complete-result-panel{
+    margin-left:5px;
+}
+
+.complete-result-panel .result-heading{
+    -webkit-align-content: center;
+    align-content: center;
+}
+.deploy-text{
+    width:100px;
+    margin-bottom:5px;
+}
+.deploy-text>span{
+    vertical-align: top;
+     display: inline-block;
+}
+
+    .align > * {
+    vertical-align:middle; 
+}

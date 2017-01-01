@@ -20,7 +20,6 @@ export class ItemInfoComponent implements OnInit {
   toggle() {
     if (!(this.item.state == STATE.Pending || this.item.state == STATE.Running))
       this.areaExpanded = !this.areaExpanded;
-
   }
 
   ngOnInit() {
@@ -89,7 +88,6 @@ export class ItemInfoComponent implements OnInit {
     this.listDisplayInfo.showRejectedResult=true;
   }
   mapCompleteInfo() {
-      
     this.listDisplayInfo.metricsColor = "green";
     this.listDisplayInfo.unitTestColor = "green";
     this.listDisplayInfo.buildColor = "green";

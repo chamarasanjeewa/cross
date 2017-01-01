@@ -1,2 +1,2 @@
-export * from './itemInfo.component';
+export * from './resultComplete.component';
 

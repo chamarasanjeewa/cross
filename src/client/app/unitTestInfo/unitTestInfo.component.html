@@ -2,15 +2,14 @@
 <div class="panel panel-default panel-background">
     <div class="panel-body">
         <div class="item-heading">Unit Test</div>
-        <!--<div class="chart"
-                    chart  
-                    [data]="data" 
-                    [options]="options" 
-                    [labels]="labels" 
-                    [columnTypes]="columnTypes" 
-                    [colors]="chartColors"
-                    [chartType]="chartType">
-             </div>-->
+       <div style="display: block">
+  <canvas baseChart
+          [data]="pieChartData"
+         [colors]= "chartColors"
+          [chartType]="pieChartType"
+        
+          ></canvas>
+</div>
 
              {{unitTestInfo.passPercentage}}% tests passed
 
