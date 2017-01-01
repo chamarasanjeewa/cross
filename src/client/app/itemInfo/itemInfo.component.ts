@@ -13,7 +13,7 @@ export class ItemInfoComponent implements OnInit {
   areaExpanded: boolean = false;
   listDisplayInfo: ListDisplayInfo;
   constructor() {
-    this.listDisplayInfo = new ListDisplayInfo();
+    
 
   }
 
@@ -29,6 +29,9 @@ export class ItemInfoComponent implements OnInit {
   }
 
   getListDisplayInfo(stateInfo: STATE) {
+      
+      this.listDisplayInfo = new ListDisplayInfo();
+      
     switch (stateInfo) {
       case STATE.Pending:
         this.mapPendingInfo();
@@ -73,6 +76,7 @@ export class ItemInfoComponent implements OnInit {
     this.listDisplayInfo.functionalTestColor = "green";
     this.listDisplayInfo.panelColorClass = "panel-success"
     this.listDisplayInfo.stateString = "Accepted";
+    this.listDisplayInfo.showAcceptedResult=true;
 
   }
   mapRejectedInfo() {
@@ -82,13 +86,16 @@ export class ItemInfoComponent implements OnInit {
     this.listDisplayInfo.functionalTestColor = "#C0C0C0";
     this.listDisplayInfo.panelColorClass = "panel-danger"
     this.listDisplayInfo.stateString = "Rejected";
+    this.listDisplayInfo.showRejectedResult=true;
   }
   mapCompleteInfo() {
+      
     this.listDisplayInfo.metricsColor = "green";
     this.listDisplayInfo.unitTestColor = "green";
     this.listDisplayInfo.buildColor = "green";
     this.listDisplayInfo.functionalTestColor = "green";
     this.listDisplayInfo.panelColorClass = "panel-success"
     this.listDisplayInfo.stateString = "Complete";
+    this.listDisplayInfo.showCompleteResult=true;
   }
 }

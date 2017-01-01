@@ -19,6 +19,8 @@ export class ListDisplayInfo{
     buildColor:string;
     panelColorClass:string;
     stateString:string;
-
+    showAcceptedResult:boolean;
+    showRejectedResult:boolean;
+    showCompleteResult:boolean
 }
 

@@ -8,11 +8,15 @@ import {BuildComponent} from '../build/index'
 import {MetricsInfoComponent} from '../metricsInfo/metricsInfo.component';
 import {BuildInfoComponent} from '../buildInfo/buildInfo.component';
 import {UnitTestInfoComponent} from '../unitTestInfo/unitTestInfo.component';
+import {ResultCompleteComponent} from '../Result/ResultComplete/resultComplete.component';
+import {ResultAcceptedComponent} from '../Result/ResultAccepted/resultAccepted.component';
+import {ResultRejectedComponent} from '../Result/ResultRejected/resultRejected.component';
+
 import {FunctionalTestInfoComponent} from '../functionalTestInfo/functionalTestInfo.component';
 //import {Ng2GoogleChartModule} from 'ng2-googlechart';
 @NgModule({
     imports: [CommonModule, RouterModule.forChild(DashBoardRoutes)],
-    declarations: [DashBoardComponent,FirewallComponent,ItemInfoComponent,BuildComponent,UnitTestInfoComponent,MetricsInfoComponent,FunctionalTestInfoComponent,BuildInfoComponent],
+    declarations: [DashBoardComponent,FirewallComponent,ItemInfoComponent,BuildComponent,UnitTestInfoComponent,MetricsInfoComponent,FunctionalTestInfoComponent,BuildInfoComponent,ResultCompleteComponent,ResultRejectedComponent,ResultAcceptedComponent],
     exports: [DashBoardComponent]
 })
 
