@@ -22,31 +22,7 @@ import {ResultCompleteComponent} from '../Result/ResultComplete/resultComplete.c
 import {ResultAcceptedComponent} from '../Result/ResultAccepted/resultAccepted.component';
 import {ResultRejectedComponent} from '../Result/ResultRejected/resultRejected.component';
 
-// let helloService:any;
 
-// beforeEach(() => {
-//   TestBed.configureTestingModule({
-//       declarations: [DashBoardComponent,FirewallComponent,ItemInfoComponent,BuildComponent,UnitTestInfoComponent,MetricsInfoComponent,FunctionalTestInfoComponent,BuildInfoComponent,ResultCompleteComponent,ResultAcceptedComponent,ResultRejectedComponent],
-//     imports: [
-//       // HttpModule, etc.
-//     ],
-//     providers: [
-      
-//       {provide: TestInfoService, useValue: helloService}
-//     ]
-//   });
-// });
-
-// it("can initialize", async(() => {
-//     TestBed.compileComponents().then(() => {
-//         const fixture = TestBed.createComponent(DashBoardComponent);
-//         let element = fixture.nativeElement;
-//         let component = fixture.componentInstance;
-
-//         fixture.detectChanges();
-//         expect(component).toBeDefined();
-//     });
-// }));
 
 import { ComponentFixture, TestBed,async  } from '@angular/core/testing';
 import { By }              from '@angular/platform-browser';
@@ -78,7 +54,7 @@ describe('BannerComponent (templateUrl)', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(DashBoardComponent);
 
-    comp = fixture.componentInstance; // BannerComponent test instance
+    comp = fixture.componentInstance; 
 
     // query for the title <h1> by CSS element selector
     de = fixture.debugElement.query(By.css('h1'));

@@ -5,3 +5,10 @@
     font-size: 16px; 
     color: green;
 }
+
+.chart{
+   width: 100px;
+   min-height: 100px;
+   margin:2px;
+   }
+      

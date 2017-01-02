@@ -1,1 +1,31 @@
+.panel-body{
+    width:500px;
+}
+.complete-result-panel{
+    margin-left:5px;
+}
 
+.complete-result-panel .result-heading{
+    -webkit-align-content: center;
+    align-content: center;
+}
+
+.complete-result-panel .sub-heading{
+    font-size: 16px; 
+    color: red;
+    text-align: center;
+    text-align: justify;
+     
+}
+.complete-result-panel>h1{
+      text-align: justify;
+}
+.deploy-text{
+    width:100px;
+    margin-bottom:5px;
+      text-align: justify;
+}
+.deploy-text>span{
+    vertical-align: top;
+    
+}

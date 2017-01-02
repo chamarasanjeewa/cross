@@ -2,7 +2,7 @@
 <div class="panel panel-default panel-background">
     <div class="panel-body">
         <div class="item-heading">Unit Test</div>
-       <div style="display: block">
+       <div style="display: block" class="chart">
   <canvas baseChart
           [data]="pieChartData"
          [colors]= "chartColors"
@@ -10,9 +10,10 @@
         
           ></canvas>
 </div>
-
-             {{unitTestInfo.passPercentage}}% tests passed
-
+<div>
+           <div>  {{unitTestInfo.passPercentage}}%   </div>  <div>tests passed  </div>
+             </div>
+<div>
              {{unitTestInfo.coveredPercentage}}% code covered
         <!--passed: {{unitTestInfo.passed}} failed: {{unitTestInfo.failed}}-->
     </div>

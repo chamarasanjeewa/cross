@@ -71,16 +71,20 @@ button:hover {
             width: calc((100% / 8) - 30px);
             vertical-align: top;
         }
-.table-inside-list{
-  
-}
+
 .table-inside-list>li{
-  width: calc((100% / 5) - 30px);
    vertical-align: top;
+   margin:5px;
+   padding:5px;
    
 }
+.table-inside-list>li .panel{
+    min-height: 150px;
+     min-width:150px;
+}
 .table-inside-list>li .panel-body{
-min-height: 360px;
+
+margin:5px;
 }
 .progress{
   margin-bottom: 0;
@@ -89,19 +93,16 @@ min-height: 360px;
 .item-heading{
     font-size: 16px; 
     color: green;
+     font-weight: bold;
 }
 
 .panel-background{
 border-color: green;
 border-width: 4px;
+ box-shadow: 5px 5px 5px #888888;
 }
 
 .panel-background-empty{
 border-color: snow;
 border-width: 4px;
-}
-
-.panel-heading{
-    
-     font-weight: bold;
 }
