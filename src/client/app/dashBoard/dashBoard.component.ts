@@ -2,7 +2,7 @@ import { Component, OnInit, NgModule,Input  } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
-import { TestInfoService } from '../services/testInfoService';
+import { TestInfoService } from '../services/testInfo.service';
 import {TestInfoModel} from '../models/testInfoModel'
 //import {Ng2GoogleChartModule} from 'ng2-googlechart';
 
