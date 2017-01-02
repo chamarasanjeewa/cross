@@ -1,26 +1,26 @@
-//  import { Component } from '@angular/core';
+ import { Component } from '@angular/core';
 //  import { async,TestBed } from '@angular/core/testing';
 //  import {TwainComponent} from './testComponent';
-// import { FormsModule } from '@angular/forms';
-// import { RouterModule } from '@angular/router';
-// import {TestService} from '../services/user.service';
-// import {HomeComponent} from '../home/home.component';
-// import { Routes } from '@angular/router';
-// import {DashBoardComponent} from './dashBoard.component';
- //import { TestInfoService } from '../services/testInfoService';
-// import { NgModule } from '@angular/core';
-// import { CommonModule } from '@angular/common';
-// import { DashBoardRoutes } from './index';
-// import {FirewallComponent} from '../fireWall/firewall.component'
-// import {ItemInfoComponent} from '../itemInfo/itemInfo.component'
-// import {BuildComponent} from '../build/index'
-// import {MetricsInfoComponent} from '../metricsInfo/metricsInfo.component';
-// import {BuildInfoComponent} from '../buildInfo/buildInfo.component';
-// import {UnitTestInfoComponent} from '../unitTestInfo/unitTestInfo.component';
-// import {FunctionalTestInfoComponent} from '../functionalTestInfo/functionalTestInfo.component';
-// import {ResultCompleteComponent} from '../Result/ResultComplete/resultComplete.component';
-// import {ResultAcceptedComponent} from '../Result/ResultAccepted/resultAccepted.component';
-// import {ResultRejectedComponent} from '../Result/ResultRejected/resultRejected.component';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import {TestService} from '../services/user.service';
+import {HomeComponent} from '../home/home.component';
+import { Routes } from '@angular/router';
+import {DashBoardComponent} from './dashBoard.component';
+ import { TestInfoService } from '../services/testInfoService';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { DashBoardRoutes } from './index';
+import {FirewallComponent} from '../fireWall/firewall.component'
+import {ItemInfoComponent} from '../itemInfo/itemInfo.component'
+import {BuildComponent} from '../build/index'
+import {MetricsInfoComponent} from '../metricsInfo/metricsInfo.component';
+import {BuildInfoComponent} from '../buildInfo/buildInfo.component';
+import {UnitTestInfoComponent} from '../unitTestInfo/unitTestInfo.component';
+import {FunctionalTestInfoComponent} from '../functionalTestInfo/functionalTestInfo.component';
+import {ResultCompleteComponent} from '../Result/ResultComplete/resultComplete.component';
+import {ResultAcceptedComponent} from '../Result/ResultAccepted/resultAccepted.component';
+import {ResultRejectedComponent} from '../Result/ResultRejected/resultRejected.component';
 
 // let helloService:any;
 
@@ -63,8 +63,15 @@ describe('BannerComponent (templateUrl)', () => {
 
   // async beforeEach
   beforeEach(async(() => {
+  let testInfoServiceStub = {
+      isLoggedIn: true,
+      user: { name: 'Test User'}
+    };
+
+
     TestBed.configureTestingModule({
-      declarations: [ BannerComponent], // declare the test component
+      declarations: [ BannerComponent,DashBoardComponent], // declare the test component
+     providers:[ {provide: TestInfoService, useValue: testInfoServiceStub }]
     })
     .compileComponents();  // compile template and css
   }));
