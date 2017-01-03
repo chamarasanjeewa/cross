@@ -1,14 +1,31 @@
-.result-percentage{
-    margin-left:5px;
-}
-.result-percentage>h1{
-    font-size: 16px; 
-    color: green;
-}
 
 .chart{
    width: 100px;
    min-height: 100px;
    margin:2px;
+     display:inline-block;
+   }
+
+  
+   .pass-content{
+
+    display:inline-block;
+   }
+
+   .pass-content:first-child{
+        font-size: 16px;
+        color: green;
+   }
+
+
+   .covered-content{
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 18px;
+    background-color:lightcoral;
+   }
+   .covered-content>div{
+       font-size: 12px;
    }
       

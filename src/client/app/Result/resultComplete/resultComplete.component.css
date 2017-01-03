@@ -12,18 +12,20 @@
 .complete-result-panel .result-heading{
     -webkit-align-content: center;
     align-content: center;
+        text-align: center;
 }
 .complete-result-panel .sub-heading{
     font-size: 16px; 
     color: black;
      font-weight: bold;
-       text-align: justify;
+     
+           text-align: center;
 }
 .complete-result-panel>h1{
       text-align: justify;
 }
 .deploy-text{
-    width:100px;
+    width:auto;
     margin-bottom:5px;
       text-align: justify;
 }

@@ -6,16 +6,27 @@
 .complete-result-panel .result-heading{
     -webkit-align-content: center;
     align-content: center;
+        text-align: center;
+}
+
+.complete-result-panel .sub-heading{
+    font-size: 16px; 
+    color: orange;
+    text-align: center;
+     
 }
 .complete-result-panel>h1{
-      text-align: justify;
+      
+      color: orange;
+      text-align: center;
 }
-.deploy-text{
-    width:100px;
+.merge-text{
+    width:auto;
     margin-bottom:5px;
-      text-align: justify;
+      text-align: center;
+       white-space: nowrap;
 }
-.deploy-text>span{
+.merge-text>span{
     vertical-align: top;
      display: inline-block;
 }

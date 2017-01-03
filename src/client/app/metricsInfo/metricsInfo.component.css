@@ -1,0 +1,30 @@
+.metrics-container {
+  display: table;
+  height: 5px;
+  text-align: center;
+ 
+}
+.first-metrix{
+  display:inline-block;
+}
+
+.secound-metrix{
+    display:inline-block;
+}
+
+.metrics-container:first-child {
+  display: table;
+  height: 2px;
+  width: 2px;
+  text-align: center;
+  margin: 10px;
+ 
+}
+
+.metrics-container:secound-child {
+  display: table;
+  height: 2px;
+  width: 2px;
+  text-align: center;
+  margin: 10px;
+}

@@ -1,22 +1,18 @@
-
 <div class="panel panel-default panel-background">
     <div class="panel-body">
         <div class="item-heading">Unit Test</div>
-       <div style="display: block" class="chart">
-  <canvas baseChart
-          [data]="pieChartData"
-         [colors]= "chartColors"
-          [chartType]="pieChartType"
-        
-          ></canvas>
-</div>
-<div>
-           <div>  {{unitTestInfo.passPercentage}}%   </div>  <div>tests passed  </div>
-             </div>
-<div>
-             {{unitTestInfo.coveredPercentage}}% code covered
-        <!--passed: {{unitTestInfo.passed}} failed: {{unitTestInfo.failed}}-->
+        <div class="chart-content">
+        <div  class="chart">
+            <canvas baseChart [data]="pieChartData" [colors]="chartColors" [chartType]="pieChartType"></canvas>
+        </div>
+          <div class="pass-content">
+            <div> {{unitTestInfo.passPercentage}}% </div>
+            <div>tests passed </div>
+        </div>
+        </div>
+       
+        <div class="covered-content">
+            {{unitTestInfo.coveredPercentage}}%
+            <div>code covered</div>
+        </div>
     </div>
-</div>
-
- 

@@ -1,31 +1,33 @@
 .panel-body{
     width:500px;
 }
-.complete-result-panel{
+.reject-result-panel{
     margin-left:5px;
 }
 
-.complete-result-panel .result-heading{
+.reject-result-panel .result-heading{
     -webkit-align-content: center;
     align-content: center;
+        text-align: center;
 }
 
-.complete-result-panel .sub-heading{
+.reject-result-panel .sub-heading{
     font-size: 16px; 
     color: red;
     text-align: center;
-    text-align: justify;
      
 }
-.complete-result-panel>h1{
-      text-align: justify;
+.reject-result-panel>h1{
+      text-align: center;
+      color:red;
 }
-.deploy-text{
+.reject-text{
     width:100px;
     margin-bottom:5px;
       text-align: justify;
+       white-space: nowrap;
 }
-.deploy-text>span{
+.reject-text>span{
     vertical-align: top;
     
 }

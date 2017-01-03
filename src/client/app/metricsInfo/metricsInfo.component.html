@@ -1,9 +1,28 @@
 <div class="panel panel-default panel-background">
     <div class="panel-body">
         <div class="item-heading text-bold">Metrics</div>
-        <div><span></span>Test <span>{{metricsInfo.test}}</span></div>
-        <div><span></span>Maintainability <span>{{metricsInfo.maintainability}}</span></div>
-        <div><span></span>Security <span>{{metricsInfo.security}}</span></div>
-        <div><span></span>Workmanship <span>{{metricsInfo.workmanship}}</span>
+        <div class="first-metrix">
+            <div class="metrics-container">
+                <div>{{metricsInfo.test}}</div>
+                <div>Test</div>
+            </div>
+            <div class="metrics-container">
+                <div>{{metricsInfo.maintainability}}</div>
+                <div>Maintainability</div>
+            </div>
+        </div>
+
+        <div class="secound-metrix">
+
+            <div class="metrics-container">
+                <div>{{metricsInfo.security}}</div>
+                <div>Security</div>
+            </div>
+
+            <div class="metrics-container">
+                <div>{{metricsInfo.workmanship}}</div>
+                <div>Workmanship</div>
+
+            </div>
         </div>
     </div>
