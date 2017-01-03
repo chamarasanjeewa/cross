@@ -8,7 +8,7 @@ import { Component,Input } from '@angular/core';
 })
 
 export class ResultRejectedComponent {
-    // @Input() item: any;
+    
      areaExpanded:boolean=false;
      constructor(){
        

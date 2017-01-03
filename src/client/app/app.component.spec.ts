@@ -37,11 +37,4 @@ describe('AppComponent (templateUrl)', () => {
     expect(app).toBeTruthy();
   }));
 
-//   it('should display a different test title', () => {
-//     comp.title = 'Test Title';
-//     fixture.detectChanges();
-//     expect(el.textContent).toContain('Test Title');
-//   });
-
-  
 });

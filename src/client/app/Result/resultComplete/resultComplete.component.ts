@@ -8,7 +8,6 @@ import { Component,Input } from '@angular/core';
 })
 
 export class ResultCompleteComponent {
-    // @Input() item: any;
      areaExpanded:boolean=false;
      constructor(){
        

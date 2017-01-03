@@ -21,7 +21,6 @@ export class UnitTestInfoComponent implements OnInit {
         this.pieChartData = [this.unitTestInfo.passed, this.unitTestInfo.failed];
         this.chartColors= [{ backgroundColor: ["green", "red"] }];
 
-
     }
 
 
